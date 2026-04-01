@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿部川家 沖縄旅行しおり 2025.4.4–4.6</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --ocean:       #1a6e8a;
+  --ocean-deep:  #0d4a62;
+  --ocean-mid:   #3a9bb5;
+  --ocean-light: #e0f2f8;
+  --sand:        #f5ede0;
+  --sand-dark:   #c8913a;
+  --coral:       #e05a3a;
+  --coral-light: #fdf0ec;
+  --green:       #2a6e48;
+  --green-light: #e8f5ee;
+  --text:        #1a2332;
+  --muted:       #607080;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
+               'Yu Gothic', 'Meiryo', sans-serif;
+  color: var(--text);
+  background: #f0f4f8;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ── NAV ── */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--ocean-deep);
+  display: flex; overflow-x: auto; gap: 2px;
+  padding: 0 8px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  color: rgba(255,255,255,0.75); text-decoration: none;
+  font-size: 11px; font-weight: 600; white-space: nowrap;
+  padding: 10px 12px; border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+.nav a:hover { color: white; border-bottom-color: var(--ocean-mid); }
+
+/* ── COVER ── */
+.cover {
+  background: linear-gradient(155deg, #0a3d55 0%, #1a6e8a 45%, #2a9bb5 75%, #45c3d9 100%);
+  padding: 60px 24px 80px;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.cover::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 80'%3E%3Cpath d='M0,40 Q300,0 600,40 Q900,80 1200,30 L1200,80 L0,80Z' fill='%23f0f4f8'/%3E%3C/svg%3E") no-repeat bottom/cover;
+}
+.cover-icon  { font-size: 64px; margin-bottom: 16px; display: block; }
+.cover-label { font-size: 11px; color: rgba(255,255,255,0.65); letter-spacing: 5px; text-transform: uppercase; margin-bottom: 10px; }
+.cover-title { font-size: 32px; font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 10px; }
+.cover-date  { font-size: 15px; color: rgba(255,255,255,0.9); font-weight: 500; letter-spacing: 2px; margin-bottom: 24px; }
+
+.members {
+  display: flex; justify-content: center; flex-wrap: wrap;
+  gap: 10px; margin-bottom: 24px;
+}
+.member {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 50px; padding: 6px 18px;
+  color: white; font-size: 13px; font-weight: 600;
+}
+.member span { display: block; font-size: 10px; opacity: 0.75; font-weight: 400; letter-spacing: 1px; }
+
+.cover-hotel {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 12px; padding: 14px 20px;
+  color: white; margin-bottom: 24px;
+  display: inline-block; max-width: 420px; width: 100%;
+}
+.cover-hotel-lbl  { font-size: 10px; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+.cover-hotel-name { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+.cover-hotel-sub  { font-size: 11px; opacity: 0.8; }
+
+.cover-stats {
+  display: flex; justify-content: center; gap: 0;
+  background: rgba(255,255,255,0.13);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 14px; padding: 16px 8px;
+  max-width: 360px; width: 100%; margin: 0 auto;
+}
+.stat { flex: 1; text-align: center; }
+.stat + .stat { border-left: 1px solid rgba(255,255,255,0.2); }
+.stat-num { display: block; font-size: 26px; font-weight: 800; color: white; }
+.stat-lbl { font-size: 10px; color: rgba(255,255,255,0.72); }
+
+/* ── SECTION ── */
+.section {
+  max-width: 680px; margin: 0 auto;
+  padding: 0 16px 40px;
+}
+
+/* ── DAY HEADER ── */
+.day-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 28px 0 16px;
+  border-bottom: 2px solid var(--ocean-light);
+  margin-bottom: 20px;
+}
+.day-badge {
+  font-size: 11px; font-weight: 700; padding: 4px 12px;
+  border-radius: 50px; color: white; white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+.d1 { background: var(--ocean); }
+.d2 { background: var(--green); }
+.d3 { background: #7a4010; }
+.df { background: var(--sand-dark); }
+.dp { background: #5a3a7a; }
+
+.day-title { font-size: 22px; font-weight: 800; color: var(--text); }
+.day-sub   { font-size: 12px; color: var(--muted); margin-left: auto; white-space: nowrap; }
+
+.hotel-pill {
+  font-size: 11px; background: #fff8f0; color: #7a4010;
+  border: 1px solid #e8c898; border-radius: 50px;
+  padding: 3px 10px; white-space: nowrap; flex-shrink: 0;
+}
+
+/* ── TIMELINE ── */
+.tl { position: relative; padding-left: 32px; }
+.tl::before {
+  content: ''; position: absolute; left: 6px; top: 6px; bottom: 6px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--ocean-mid), var(--sand-dark) 70%, rgba(200,200,200,0.2));
+}
+.tli { position: relative; margin-bottom: 16px; }
+.tli:last-child { margin-bottom: 0; }
+
+.dot {
+  position: absolute; left: -27px; top: 5px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: white; border: 2.5px solid var(--ocean-mid);
+}
+.dot.food { border-color: var(--sand-dark); background: #fff8ee; }
+.dot.act  { border-color: var(--green);     background: var(--green-light); }
+.dot.move { border-color: #bbb;             background: #f0f0f0; }
+.dot.warn { border-color: var(--coral);     background: var(--coral-light); }
+
+.ttime {
+  font-size: 11px; font-weight: 700; color: var(--muted);
+  margin-bottom: 4px; letter-spacing: 0.3px;
+}
+.tcard {
+  background: white; border-radius: 10px;
+  border: 1px solid #dde4ec;
+  border-left: 4px solid var(--ocean-mid);
+  padding: 12px 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.tcard.food { border-left-color: var(--sand-dark); background: #fffcf8; }
+.tcard.act  { border-left-color: var(--green);     background: #f9fdf9; }
+.tcard.move { border-left-color: #ccc; background: #f8f8f8; border-color: #e4e4e4; box-shadow: none; }
+.tcard.warn { border-left-color: var(--coral);     background: var(--coral-light); }
+
+.tname { font-size: 15px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+.tdesc { font-size: 13px; color: #445566; line-height: 1.6; }
+.tags  { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tag   { font-size: 11px; padding: 2px 10px; border-radius: 50px; font-weight: 500; }
+.tf { background: #faeeda; color: #7a4010; }
+.ta { background: #ddf0e8; color: #1a5a38; }
+.ti { background: #eef2f7; color: #445566; }
+.tw { background: #fdf0ec; color: #943020; }
+.rat { font-size: 12px; color: #ba7517; font-weight: 600; }
+
+/* ── FOOD GRID ── */
+.food2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+@media (max-width: 480px) { .food2 { grid-template-columns: 1fr; } }
+.fcard {
+  background: #fffcf7; border: 1px solid #e8d8b8;
+  border-radius: 10px; padding: 14px;
+}
+.femoji { font-size: 28px; display: block; margin-bottom: 6px; }
+.fname  { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+.frat   { font-size: 12px; color: #ba7517; margin-bottom: 6px; }
+.fdesc  { font-size: 12px; color: #556; line-height: 1.55; }
+.fdday  { display: inline-block; margin-top: 8px; font-size: 11px; background: var(--ocean-light); color: var(--ocean-deep); border-radius: 50px; padding: 2px 10px; }
+
+.sec-title {
+  font-size: 14px; font-weight: 700; color: var(--text);
+  margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid #eee;
+}
+
+/* ── RESERVE BOX ── */
+.resbox {
+  background: linear-gradient(135deg, #fff8f0, #fdf4e8);
+  border: 1px solid #e0c090; border-radius: 12px; padding: 16px;
+}
+.resbox-title { font-size: 14px; font-weight: 700; color: #7a4010; margin-bottom: 12px; }
+.resgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 480px) { .resgrid { grid-template-columns: 1fr; } }
+.resitem { background: white; border-radius: 8px; padding: 12px; border: 1px solid #e8c898; }
+.resname { font-size: 13px; font-weight: 700; margin-bottom: 5px; }
+.resdet  { font-size: 12px; color: var(--muted); line-height: 1.7; }
+.resdet b { color: var(--coral); }
+
+/* ── ROUTE BOX ── */
+.routebox {
+  background: var(--ocean-light); border-radius: 12px;
+  padding: 16px 18px; margin-bottom: 16px;
+}
+.routetitle { font-size: 14px; font-weight: 700; color: var(--ocean-deep); margin-bottom: 10px; }
+.routerow { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; margin-bottom: 8px; line-height: 1.5; }
+.routerow:last-child { margin-bottom: 0; }
+.rday   { font-weight: 700; color: var(--ocean); min-width: 38px; flex-shrink: 0; }
+.rarrow { color: var(--ocean-mid); font-weight: 700; flex-shrink: 0; }
+
+/* ── TIPS ── */
+.tipbox {
+  background: var(--ocean-light); border: 1px solid #b0d4e4;
+  border-radius: 12px; padding: 16px 18px; margin-bottom: 16px;
+}
+.tiptitle { font-size: 14px; font-weight: 700; color: var(--ocean-deep); margin-bottom: 10px; }
+.tiplist  { list-style: none; }
+.tiplist li { font-size: 13px; color: #2a4a5a; padding: 4px 0 4px 18px; position: relative; line-height: 1.6; }
+.tiplist li::before { content: '▸'; position: absolute; left: 0; color: var(--ocean-mid); }
+
+/* ── CHECKLIST ── */
+.clbox {
+  background: #f5fdf7; border: 1px solid #a8d4b4;
+  border-radius: 12px; padding: 16px 18px; margin-bottom: 16px;
+}
+.cltitle { font-size: 14px; font-weight: 700; color: var(--green); margin-bottom: 10px; }
+.clgrid  { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; }
+@media (max-width: 420px) { .clgrid { grid-template-columns: 1fr; } }
+.clitem  { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; line-height: 1.5; }
+.cb { width: 16px; height: 16px; border: 2px solid #888; border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+
+/* ── END CARD ── */
+.endcard {
+  text-align: center; padding: 28px 20px;
+  background: linear-gradient(135deg, var(--ocean-light), #d4eef8);
+  border-radius: 16px; margin-top: 8px;
+}
+.endcard-icon  { font-size: 36px; margin-bottom: 10px; }
+.endcard-title { font-size: 20px; font-weight: 800; color: var(--ocean-deep); margin-bottom: 6px; }
+.endcard-sub   { font-size: 13px; color: var(--muted); }
+
+/* ── DIVIDER ── */
+.divider { height: 1px; background: linear-gradient(to right, transparent, #c8d8e4, transparent); margin: 24px 0; }
+
+/* ── FOOTER ── */
+footer {
+  text-align: center; padding: 32px 16px 48px;
+  font-size: 12px; color: var(--muted);
+  border-top: 1px solid #dde4ec;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#cover">🌺 表紙</a>
+  <a href="#day1">Day 1</a>
+  <a href="#day2">Day 2</a>
+  <a href="#day3">Day 3</a>
+  <a href="#gourmet">グルメ</a>
+  <a href="#yoyaku">予約</a>
+  <a href="#prep">準備</a>
+</nav>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+  <span class="cover-icon">🌺</span>
+  <div class="cover-label">Family Travel Guide</div>
+  <div class="cover-title">阿部川家<br>沖縄旅行しおり</div>
+  <div class="cover-date">2025年 4月4日（金）〜 4月6日（日）</div>
+
+  <div class="members">
+    <div class="member">🧔 SHOHEI<span>パパ</span></div>
+    <div class="member">👩 MOMO<span>ママ</span></div>
+    <div class="member">👦 MAHIRO<span>7歳</span></div>
+    <div class="member">👦 MINAMI<span>5歳</span></div>
+  </div>
+
+  <div class="cover-hotel">
+    <div class="cover-hotel-lbl">宿泊ホテル</div>
+    <div class="cover-hotel-name">Hyatt Regency Seragaki Island, Okinawa</div>
+    <div class="cover-hotel-sub">恩納村 ★4.4 — 那覇空港から約60分</div>
+  </div>
+
+  <div class="cover-stats">
+    <div class="stat"><span class="stat-num">2泊3日</span><span class="stat-lbl">旅行日数</span></div>
+    <div class="stat"><span class="stat-num">5回</span><span class="stat-lbl">体験</span></div>
+    <div class="stat"><span class="stat-num">7店</span><span class="stat-lbl">厳選グルメ</span></div>
+  </div>
+</div>
+
+<!-- DAY 1 -->
+<div class="section" id="day1">
+  <div class="day-head">
+    <span class="day-badge d1">DAY 1 · 4月4日（金）</span>
+    <div class="day-title">那覇 → ホテル</div>
+    <span class="hotel-pill">🏨 Hyatt Seragaki</span>
+  </div>
+  <div class="tl">
+
+    <div class="tli">
+      <div class="dot move"></div>
+      <div class="ttime">12:00</div>
+      <div class="tcard move">
+        <div class="tdesc">✈ 那覇空港 到着 → レンタカー受け取り（約40分）→ 国際通りへ</div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot food"></div>
+      <div class="ttime">13:00 ― 昼食</div>
+      <div class="tcard food">
+        <div class="tname">JAM'S TACOS — 国際通り店 <span class="rat">★4.7（894件）</span></div>
+        <div class="tdesc">沖縄タコライスの最高峰。3Fイートインで開放感あり。タコライスとタコスを両方頼んで食べ比べが正解。予約不要でスムーズに入れる。</div>
+        <div class="tags"><span class="tag tf">タコライス①</span><span class="tag ti">予約不要</span><span class="tag ti">国際通り徒歩圏</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot act"></div>
+      <div class="ttime">14:30 ― 体験①</div>
+      <div class="tcard act">
+        <div class="tname">TRIP CRAFT NAHA — シーサー絵付け体験 <span class="rat">★4.5</span></div>
+        <div class="tdesc">国際通りから徒歩圏内。焼き上がったシーサーに好きな色で絵付け。MAHIRO・MINAMIでも90分で完成、当日持ち帰り可能。初日から手元に沖縄の思い出が残る。</div>
+        <div class="tags"><span class="tag ta">工作体験</span><span class="tag ti">完全屋内 90分</span><span class="tag tw">要予約 📞 098-975-5183</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot move"></div>
+      <div class="ttime">16:30 ― 移動</div>
+      <div class="tcard move">
+        <div class="tdesc">那覇 → Okinawa Oni Tacorice（夕食）→ Hyatt Regency Seragaki Island チェックイン（約50分）</div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot food"></div>
+      <div class="ttime">17:30 ― 夕食（チェックイン前に立ち寄り）</div>
+      <div class="tcard food">
+        <div class="tname">Okinawa Oni Tacorice（那覇松尾） <span class="rat">★4.9（406件）</span></div>
+        <div class="tdesc">評価4.9の圧倒的タコライス。塊肉使用で旨味が段違い。緑チリ・赤チリの2種から選択。昼のJAM'Sとは全く異なるスタイルで「MAHIRO・MINAMIどっちが好き？」論争が必至。</div>
+        <div class="tags"><span class="tag tf">タコライス②</span><span class="tag ti">評価4.9</span><span class="tag ti">予約不要</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot move"></div>
+      <div class="ttime">19:00 ― チェックイン</div>
+      <div class="tcard move">
+        <div class="tdesc">🏨 Hyatt Regency Seragaki Island チェックイン — お疲れさまでした！</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- DAY 2 -->
+<div class="section" id="day2">
+  <div class="day-head">
+    <span class="day-badge d2">DAY 2 · 4月5日（土）</span>
+    <div class="day-title">北部終日ドライブ</div>
+    <span class="hotel-pill">🏨 Hyatt 連泊</span>
+  </div>
+  <div class="tl">
+
+    <div class="tli">
+      <div class="dot move"></div>
+      <div class="ttime">8:00</div>
+      <div class="tcard move">
+        <div class="tdesc">Hyatt Regency Seragaki Island 出発 → 恩納村・名護方面へ北上（約20〜40分）</div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot food"></div>
+      <div class="ttime">10:50 ― 昼食（早め入店が鉄則）</div>
+      <div class="tcard food">
+        <div class="tname">Nakamura Soba（恩納村） <span class="rat">★4.2（3,067件）</span></div>
+        <div class="tdesc">件数3,000超えのソーキそば名店。コシの強い麺と極厚・柔らかソーキが絶品。「沖縄で一番うまいそば」の声多数。11時開店と同時に行列 → 10:50到着が鉄則。</div>
+        <div class="tags"><span class="tag tf">ソーキそば①</span><span class="tag tw">木曜定休</span><span class="tag tw">現金のみ</span><span class="tag ti">10:50到着推奨</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot act"></div>
+      <div class="ttime">12:00 ― 体験②</div>
+      <div class="tcard act">
+        <div class="tname">名護パイナップルパーク</div>
+        <div class="tdesc">カートで恐竜＆パイナップル園を周遊。チョウ館でMAHIROとMINAMIの手に蝶が止まる瞬間が最高のシャッターチャンス。試食コーナーも豊富。食後の消化にちょうどいいペース。</div>
+        <div class="tags"><span class="tag ta">アクティビティ</span><span class="tag ti">ほぼ屋根あり</span><span class="tag ti">1〜1.5時間</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot act"></div>
+      <div class="ttime">14:00 ― 体験③</div>
+      <div class="tcard act">
+        <div class="tname">Enjoy工房 — シーサー手作り体験（名護） <span class="rat">★5.0（126件）</span></div>
+        <div class="tdesc">Google評価5.0の驚異の実績。粘土からシーサーを成形→絵付けまで完結。MAHIRO・MINAMIがスタッフに教わりながら本気で制作。SHOHEIとMOMOも一緒に楽しめる。所要90〜120分。</div>
+        <div class="tags"><span class="tag ta">シーサー手作り</span><span class="tag ti">評価5.0</span><span class="tag ti">完全屋内</span><span class="tag tw">要予約 enjoy-kobo.jp</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot food"></div>
+      <div class="ttime">17:00 ― 夕食</div>
+      <div class="tcard food">
+        <div class="tname">papaiya（本部） <span class="rat">★4.1（552件）</span></div>
+        <div class="tdesc">地元民に18年愛され続ける食堂。アグー豚セット・ソーキそば・シークヮーサージュースが看板メニュー。夜は行列なく入れる絶好タイミング（18〜20時営業）。</div>
+        <div class="tags"><span class="tag tf">沖縄料理</span><span class="tag ti">18年の名店</span><span class="tag tw">木曜定休</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot move"></div>
+      <div class="ttime">20:00</div>
+      <div class="tcard move">
+        <div class="tdesc">本部 → Hyatt Regency Seragaki Island へ帰宿（約20〜30分）</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- DAY 3 -->
+<div class="section" id="day3">
+  <div class="day-head">
+    <span class="day-badge d3">DAY 3 · 4月6日（日）</span>
+    <div class="day-title">北部→那覇空港</div>
+    <div class="day-sub">✈ 16:50 ／ 14:00出発リミット</div>
+  </div>
+  <div class="tl">
+
+    <div class="tli">
+      <div class="dot move"></div>
+      <div class="ttime">8:00 ― チェックアウト</div>
+      <div class="tcard move">
+        <div class="tdesc">Hyatt Regency Seragaki Island チェックアウト → 荷物をレンタカーへ積み込み → 本部方面へ</div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot act"></div>
+      <div class="ttime">9:00 ― 体験④</div>
+      <div class="tcard act">
+        <div class="tname">琉球ガラス工房 うみのおと（本部） <span class="rat">★4.9（121件）</span></div>
+        <div class="tdesc">評価4.9の本格ガラス吹き体験。職人と一緒に本物のガラスを吹く。MAHIRO・MINAMIでも親と一緒に参加可能。作品は郵送で自宅に届くので手荷物不要。SHOHEIとMOMOも体験できる。</div>
+        <div class="tags"><span class="tag ta">ガラス吹き</span><span class="tag ti">評価4.9</span><span class="tag ti">作品は郵送OK</span><span class="tag tw">火曜定休・要予約 📞 080-6496-7513</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot food"></div>
+      <div class="ttime">11:00 ― 昼食</div>
+      <div class="tcard food">
+        <div class="tname">Onna Soba（恩納村） <span class="rat">★4.2（599件）</span></div>
+        <div class="tdesc">地元民が売り切れまで通うソーキそばの聖地。Day2のNakamura Sobaと食べ比べが成立。11時開店に合わせて入れば待ちなし。売り切れ次第終了・現金のみ。</div>
+        <div class="tags"><span class="tag tf">ソーキそば②（食べ比べ）</span><span class="tag tw">火曜定休・現金のみ・売り切れ注意</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot act"></div>
+      <div class="ttime">12:30 ― 体験⑤</div>
+      <div class="tcard act">
+        <div class="tname">43pottery ヨンサンポッタリー（本部） <span class="rat">★4.8（250件）</span></div>
+        <div class="tdesc">ジンベエザメ・ウミガメなど海洋動物を自分でペイント。美ら海水族館の記憶と組み合わさって印象が強烈に。MAHIRO・MINAMIが集中して描く姿が見もの。所要60〜90分。14:00に出発。</div>
+        <div class="tags"><span class="tag ta">陶芸絵付け</span><span class="tag ti">評価4.8</span><span class="tag ti">完全屋内</span><span class="tag tw">14:00 出発厳守</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot warn"></div>
+      <div class="ttime">14:00 ⚡ 出発リミット</div>
+      <div class="tcard warn">
+        <div class="tdesc"><strong>本部 → 那覇空港 出発（高速利用で約80〜90分）</strong><br>14:00出発 → 15:30頃空港着が安全ライン。レンタカー返却・荷物預けに余裕を持って動く。</div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot food"></div>
+      <div class="ttime">時間次第 ― 締めグルメ</div>
+      <div class="tcard food">
+        <div class="tname">THE TACORICE HOUSE（国際通り） or 空港2Fフードコート</div>
+        <div class="tdesc">余裕があれば国際通りで「ハーフ＆ハーフ」タコライス（★4.5）を締めに。時間が厳しければ那覇空港2Fにもタコライス・ソーキそばあり。どちらでも完璧に完結する。</div>
+        <div class="tags"><span class="tag tf">タコライス③（締め）</span><span class="tag ti">★4.5</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="dot move"></div>
+      <div class="ttime">16:50</div>
+      <div class="tcard move">
+        <div class="tdesc">✈ 那覇空港 出発 — SHOHEI・MOMO・MAHIRO・MINAMI、お疲れさまでした！</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- GOURMET -->
+<div class="section" id="gourmet">
+  <div class="day-head">
+    <span class="day-badge df">グルメ</span>
+    <div class="day-title">厳選グルメ まとめ</div>
+  </div>
+
+  <div class="sec-title">🍜 ソーキそば食べ比べ</div>
+  <div class="food2" style="margin-bottom:20px;">
+    <div class="fcard">
+      <span class="femoji">🍜</span>
+      <div class="fname">Nakamura Soba（恩納村）</div>
+      <div class="frat">★4.2 / 3,067件</div>
+      <div class="fdesc">コシ強め麺、極厚ソーキ。11時開店即行列。現金のみ。10:50到着推奨。</div>
+      <span class="fdday">Day 2 昼食</span>
+    </div>
+    <div class="fcard">
+      <span class="femoji">🍜</span>
+      <div class="fname">Onna Soba（恩納村）</div>
+      <div class="frat">★4.2 / 599件</div>
+      <div class="fdesc">地元民の聖地。売り切れ注意。現金のみ。Day2との食べ比べが成立。</div>
+      <span class="fdday">Day 3 昼食</span>
+    </div>
+  </div>
+
+  <div class="sec-title">🌮 タコライス食べ比べ3店</div>
+  <div class="food2">
+    <div class="fcard">
+      <span class="femoji">🌮</span>
+      <div class="fname">JAM'S TACOS（国際通り）</div>
+      <div class="frat">★4.7 / 894件</div>
+      <div class="fdesc">コーントルティーヤが絶品。3Fイートインで開放感あり。</div>
+      <span class="fdday">Day 1 昼食</span>
+    </div>
+    <div class="fcard">
+      <span class="femoji">🌶️</span>
+      <div class="fname">Okinawa Oni Tacorice</div>
+      <div class="frat">★4.9 / 406件</div>
+      <div class="fdesc">塊肉使用・超濃厚。緑/赤チリ選択。島最高評価の1店。</div>
+      <span class="fdday">Day 1 夕食</span>
+    </div>
+    <div class="fcard">
+      <span class="femoji">🍚</span>
+      <div class="fname">THE TACORICE HOUSE</div>
+      <div class="frat">★4.5 / 580件</div>
+      <div class="fdesc">ハーフ&ハーフで2種類を一気に食べ比べ可能。締めに最適。</div>
+      <span class="fdday">Day 3 締め</span>
+    </div>
+    <div class="fcard">
+      <span class="femoji">🐷</span>
+      <div class="fname">papaiya（本部）</div>
+      <div class="frat">★4.1 / 552件</div>
+      <div class="fdesc">18年愛される地元食堂。アグー豚・シークヮーサージュース。</div>
+      <span class="fdday">Day 2 夕食</span>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- RESERVE -->
+<div class="section" id="yoyaku">
+  <div class="day-head">
+    <span class="day-badge df">予約</span>
+    <div class="day-title">予約チェックリスト</div>
+    <div class="day-sub">今すぐやること</div>
+  </div>
+
+  <div class="resbox">
+    <div class="resbox-title">📋 4件すべて要予約</div>
+    <div class="resgrid">
+      <div class="resitem">
+        <div class="resname">🔵 うみのおとガラス工房</div>
+        <div class="resdet">日程：<b>4/6（日）9:00〜</b><br>📞 080-6496-7513<br>Instagram DM可<br>火曜定休</div>
+      </div>
+      <div class="resitem">
+        <div class="resname">🟢 Enjoy工房（シーサー手作り）</div>
+        <div class="resdet">日程：<b>4/5（土）14:00〜</b><br>🌐 enjoy-kobo.jp<br>📞 0980-43-6556</div>
+      </div>
+      <div class="resitem">
+        <div class="resname">🟡 TRIP CRAFT NAHA</div>
+        <div class="resdet">日程：<b>4/4（金）14:30〜</b><br>📞 098-975-5183<br>水曜定休</div>
+      </div>
+      <div class="resitem">
+        <div class="resname">🟠 43pottery（陶芸絵付け）</div>
+        <div class="resdet">日程：<b>4/6（日）12:30〜</b><br>📞 0980-43-7789<br>予約推奨</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PREP -->
+<div class="section" id="prep">
+  <div class="day-head">
+    <span class="day-badge dp">準備</span>
+    <div class="day-title">ルート・持ち物</div>
+  </div>
+
+  <div class="routebox">
+    <div class="routetitle">🚗 3日間ルート概要</div>
+    <div class="routerow"><span class="rday">DAY1</span><span class="rarrow">→</span><span>那覇空港 → 国際通り（JAM'S TACOS・シーサー体験）→ Oni Tacorice → Hyatt Seragaki チェックイン</span></div>
+    <div class="routerow"><span class="rday">DAY2</span><span class="rarrow">→</span><span>Hyatt → 恩納村（Nakamura Soba）→ 名護（パイナップルパーク・Enjoy工房）→ 本部（papaiya）→ Hyatt</span></div>
+    <div class="routerow"><span class="rday">DAY3</span><span class="rarrow">→</span><span>Hyatt チェックアウト → 本部（うみのおと・Onna Soba・43pottery）→ <strong>14:00出発</strong> → 那覇空港（90分）→ 16:50 ✈</span></div>
+  </div>
+
+  <div class="tipbox">
+    <div class="tiptitle">☔ 雨でも全力で楽しむコツ</div>
+    <ul class="tiplist">
+      <li>4月の沖縄は22〜26℃。雨でも寒くない。MAHIRO・MINAMI用レインコートが傘より快適。</li>
+      <li>全5つのアクティビティが完全屋内 or 屋根あり設計。雨でも一切困らない。</li>
+      <li>体験工房は服が汚れる場合あり。MAHIRO・MINAMI分の着替え1セットを車に積んでおく。</li>
+      <li>Hyatt Seragakiから名護・本部エリアは約20〜30分。北部ドライブに最高の立地。</li>
+      <li>ガラス吹きの作品は郵送対応。重い荷物を持って帰る必要なし。</li>
+      <li>Day3の14:00出発は絶対厳守。那覇空港まで高速で80〜90分かかる。</li>
+    </ul>
+  </div>
+
+  <div class="clbox">
+    <div class="cltitle">✅ 持ち物チェックリスト</div>
+    <div class="clgrid">
+      <div class="clitem"><div class="cb"></div>現金（そば店は現金のみ）</div>
+      <div class="clitem"><div class="cb"></div>子供用レインコート×2</div>
+      <div class="clitem"><div class="cb"></div>着替え（体験で汚れる可能性）</div>
+      <div class="clitem"><div class="cb"></div>日焼け止め</div>
+      <div class="clitem"><div class="cb"></div>酔い止め（北部ドライブ）</div>
+      <div class="clitem"><div class="cb"></div>子供用スニーカー</div>
+      <div class="clitem"><div class="cb"></div>ウエットティッシュ</div>
+      <div class="clitem"><div class="cb"></div>常備薬</div>
+      <div class="clitem"><div class="cb"></div>充電器・モバイルバッテリー</div>
+      <div class="clitem"><div class="cb"></div>カメラ・SDカード</div>
+      <div class="clitem"><div class="cb"></div>保険証（家族4人分）</div>
+      <div class="clitem"><div class="cb"></div>運転免許証（SHOHEI）</div>
+    </div>
+  </div>
+
+  <div class="endcard">
+    <div class="endcard-icon">🌺🌊👨‍👩‍👦‍👦</div>
+    <div class="endcard-title">Have a wonderful trip!</div>
+    <div class="endcard-sub">SHOHEI · MOMO · MAHIRO · MINAMI<br>Hyatt Regency Seragaki Island を拠点に — 家族4人で最高の思い出を</div>
+  </div>
+</div>
+
+<footer>
+  🌺 阿部川家 沖縄旅行しおり 2025.4.4–4.6 &nbsp;|&nbsp; Hyatt Regency Seragaki Island, Okinawa
+</footer>
+
+</body>
+</html>
